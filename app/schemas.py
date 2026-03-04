@@ -42,3 +42,20 @@ class ProductRead(ProductBase):
     id: int
 
     model_config = ConfigDict(from_attributes=True)
+
+
+class CustomerBase(BaseModel):
+    name: str
+    phone_number: str
+    village: str
+    address: str
+
+
+class CustomerCreate(CustomerBase):
+    pass
+
+
+class CustomerRead(CustomerBase):
+    id: int
+
+    model_config = ConfigDict(from_attributes=True)
