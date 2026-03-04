@@ -20,3 +20,25 @@ class OrderRead(OrderBase):
     created_at: datetime
 
     model_config = ConfigDict(from_attributes=True)
+
+
+class ProductBase(BaseModel):
+    name: str
+    price: float
+    category: str
+    stock: int
+    unit: str
+
+
+class ProductCreate(ProductBase):
+    pass
+
+
+class ProductUpdate(ProductBase):
+    pass
+
+
+class ProductRead(ProductBase):
+    id: int
+
+    model_config = ConfigDict(from_attributes=True)
